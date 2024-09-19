@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 139167278}
   - component: {fileID: 139167277}
+  - component: {fileID: 139167279}
   m_Layer: 0
   m_Name: nave arriba
   m_TagString: Untagged
@@ -206,6 +207,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -0.763, y: -2.186, z: -0.808}
+--- !u!114 &139167279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139167276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25df328f628e32c42bdd1bba4012ae12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &149657591
 GameObject:
   m_ObjectHideFlags: 0
