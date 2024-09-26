@@ -8,9 +8,13 @@ public class Nuevo : MonoBehaviour
     private float velocitat;
     private Vector2 minPantalla, maxPantalla;
 
+    [SerializeField]
+    private GameObject prefabProjectil;
+
     // Start is called before the first frame update
     void Start()
     {
+        
         velocitat = 8;
         minPantalla = Camera.main.ViewportToWorldPoint(new Vector2(0,0));
         maxPantalla = Camera.main.ViewportToWorldPoint(new Vector2(1,1));
@@ -28,7 +32,13 @@ public class Nuevo : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+        movimentNau();
+        DisparaProjectil();
+        
+    }
+    private void movimentNau()
+    {
         //movimiento izquierda y derecha
         float direccioIndicadaX = Input.GetAxisRaw("Horizontal");
         float direccioIndicadaY = Input.GetAxisRaw("Vertical");
@@ -42,5 +52,14 @@ public class Nuevo : MonoBehaviour
         novaPosicio.y = Mathf.Clamp(novaPosicio.y, minPantalla.y, maxPantalla.y);
 
         transform.position = novaPosicio;
+    }
+
+    private void DisparaProjectil()
+    {
+        if(Input.GetKey("space"))
+        {
+            GameObject projectil = Instantiate(prefabProjectil);
+            projectil.transform.position = transform.position;
+        }
     }
 }
