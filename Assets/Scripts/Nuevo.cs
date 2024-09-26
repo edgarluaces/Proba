@@ -56,7 +56,7 @@ public class Nuevo : MonoBehaviour
 
     private void DisparaProjectil()
     {
-        if(Input.GetKey("space"))
+        if(Input.GetKeyDown("space"))
         {
             GameObject projectil = Instantiate(prefabProjectil);
             projectil.transform.position = transform.position;
