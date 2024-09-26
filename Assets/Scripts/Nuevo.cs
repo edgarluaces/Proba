@@ -15,14 +15,15 @@ public class Nuevo : MonoBehaviour
         minPantalla = Camera.main.ViewportToWorldPoint(new Vector2(0,0));
         maxPantalla = Camera.main.ViewportToWorldPoint(new Vector2(1,1));
 
-        minPantalla.x += GetComponent<SpriteRenderer>().sprite.bounds.size.x;
-
+        
+        float midameitatImatgeX = GetComponent<SpriteRenderer>().sprite.bounds.size.x * transform.localScale.x / 2;
+        float midameitatImatgeY = GetComponent<SpriteRenderer>().sprite.bounds.size.y * transform.localScale.y / 2;
 
         //bordes para que la nave no salga
-        minPantalla.x = minPantalla.x + 0.50f;
-        maxPantalla.x = maxPantalla.x - 0.50f;
-        minPantalla.y = minPantalla.y + 0.50f;
-        maxPantalla.y = maxPantalla.y - 0.50f;
+        minPantalla.x += midameitatImatgeX;
+        maxPantalla.x -= midameitatImatgeX;
+        minPantalla.y += midameitatImatgeY;
+        maxPantalla.y -= midameitatImatgeY;
     }
 
     // Update is called once per frame
