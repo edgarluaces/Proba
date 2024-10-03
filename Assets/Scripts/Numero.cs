@@ -14,10 +14,19 @@ public class Numero : MonoBehaviour
     {
         _vel = 2f;
         System.Random aleatori = new System.Random();
-        valorNumero = aleatori.Next(0,10);
+        valorNumero = aleatori.Next(0, 10);
         GetComponent<SpriteRenderer>().sprite = spritesNumerosPossibles[valorNumero];
-        minPantalla = Camera.main.ViewportToWorldPoint(new Vector2(0,0));
-        
+        minPantalla = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D objecteTocat)
+    {
+        if (objecteTocat.tag == "Projectil" || objecteTocat.tag == "NauJugador")
+
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

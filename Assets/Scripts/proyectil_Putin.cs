@@ -15,6 +15,14 @@ public class proyectil_Putin : MonoBehaviour
         maxPantalla = Camera.main.ViewportToWorldPoint(new Vector2(1,1));
     }
 
+    private void OnTriggerEnter2D(Collider2D objecteTocat)
+    {
+        if (objecteTocat.tag == "Numero")
+        {
+            Destroy(gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
