@@ -25,6 +25,8 @@ public class Numero : MonoBehaviour
         if (objecteTocat.tag == "Projectil" || objecteTocat.tag == "NauJugador")
 
         {
+            dadesglobals.punts += valorNumero;
+
             Destroy(gameObject);
         }
     }

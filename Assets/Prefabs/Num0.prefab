@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritesNumerosPossibles:
+  - {fileID: 21300000, guid: 358feb11374d4ed43bdda5a6bc861dde, type: 3}
   - {fileID: 21300000, guid: 13b22594abf2b93468cc6459e161a7b5, type: 3}
   - {fileID: 21300000, guid: 32d6e02fe897d5d45ab17b5a43ab52fc, type: 3}
   - {fileID: 21300000, guid: 02fc2b001a7fd6944a3b1eef53480bd3, type: 3}
@@ -109,7 +110,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 489826deb919277488f6f5434a757077, type: 3}
   - {fileID: 21300000, guid: fae7c61602aab674989d2d996633870f, type: 3}
   - {fileID: 21300000, guid: 2f379c15cb4b47244a3cf3b172f9dfdb, type: 3}
-  - {fileID: 21300000, guid: 358feb11374d4ed43bdda5a6bc861dde, type: 3}
 --- !u!50 &-4563942581409209020
 Rigidbody2D:
   serializedVersion: 4

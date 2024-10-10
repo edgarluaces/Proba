@@ -17,6 +17,7 @@ public class Nuevo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        dadesglobals.reiniciarpunts();
         vidajugador = 3;
         velocitat = 8;
         minPantalla = Camera.main.ViewportToWorldPoint(new Vector2(0,0));
