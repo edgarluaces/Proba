@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Nuevo : MonoBehaviour
 {
@@ -66,7 +67,9 @@ public class Nuevo : MonoBehaviour
             {
                 GameObject explosio = Instantiate(prefabExplosio);
                 explosio.transform.position = transform.position;
+                SceneManager.LoadScene("pantallaresultats");
                 Destroy(gameObject);
+
             }
             
         }
