@@ -8,13 +8,15 @@ public class Nuevo : MonoBehaviour
     private float velocitat;
     private Vector2 minPantalla, maxPantalla;
 
-    [SerializeField]
-    private GameObject prefabProjectil;
+    [SerializeField] private GameObject prefabProjectil;
+    [SerializeField] private GameObject prefabExplosio;
+    private int vidajugador;
+    [SerializeField] private TMPro.TextMeshProUGUI uiVidesJugador;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        vidajugador = 3;
         velocitat = 8;
         minPantalla = Camera.main.ViewportToWorldPoint(new Vector2(0,0));
         maxPantalla = Camera.main.ViewportToWorldPoint(new Vector2(1,1));
@@ -58,9 +60,19 @@ public class Nuevo : MonoBehaviour
     {
         if (objecteTocat.tag == "Numero")
         {
-            Destroy(gameObject);
+            vidajugador--;
+            uiVidesJugador.text = "Vides: " + vidajugador.ToString();
+            if(vidajugador <= 0)
+            {
+                GameObject explosio = Instantiate(prefabExplosio);
+                explosio.transform.position = transform.position;
+                Destroy(gameObject);
+            }
+            
         }
+        
     }
+
 
 
 
